@@ -1,9 +1,13 @@
+import Navbar from "../components/navbar";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1>Hello, World!</h1>
-      </main>
-    </div>
+    <main className="min-h-screen">
+      <Navbar />
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Main Content</h1>
+        <p className="mt-4">Main content of the page.</p>
+      </div>
+    </main>
   );
 }
