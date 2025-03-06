@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Michroma } from "next/font/google";
 import "./globals.css";
 
-const quicksand = Quicksand({
+const quicksand = Michroma({
   subsets: ["latin"],
   // This will load all weights from 300 to 700
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-quicksand",
+  weight: "400",
+  variable: "--font-michroma",
 });
 
 export const metadata: Metadata = {
