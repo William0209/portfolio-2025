@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/navbar";
 import HeroSection from "@/app/sections/hero-section";
+import BottomHero from "@/app/sections/bottom-hero";
 
 export default function Home() {
   return (
@@ -7,8 +8,9 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center">
         {/* Hero Section */}
-        <section className="w-full">
+        <section className="w-full flex-grow">
           <HeroSection />
+          <BottomHero />
         </section>
 
         {/* About Section */}

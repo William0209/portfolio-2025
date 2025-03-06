@@ -29,22 +29,25 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-[#e0e0e0]">
+    <section className="w-full  flex-grow min-h-[78vh] flex items-center justify-center bg-[#e0e0e0]">
       <div className="container px-4 md:px-6">
         <motion.div
-          className="flex flex-col items-center justify-center space-y-4 text-center mb-[15rem]"
+          className="flex flex-col items-center justify-center space-y-4 text-center mb-[rem]"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="space-y-2">
             <motion.h1
-              className="text-5xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-[#343434]"
+              className="text-6xl font-bold tracking-wide  sm:text-6xl md:text-7xl lg:text-8xl mb-4 text-[#343434]"
               variants={itemVariants}
             >
-              William Janssen
+              William
             </motion.h1>
-            <motion.p className="mx-auto max-w-[700px] text-[#343434]/80 md:text-xl" variants={itemVariants}>
+            <motion.p
+              className="mx-auto max-w-[700px] text-[#343434]/80 md:text-xl tracking-wide"
+              variants={itemVariants}
+            >
               Professional developer crafting elegant digital experiences
             </motion.p>
           </div>
