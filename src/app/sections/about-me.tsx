@@ -61,51 +61,39 @@ const AboutMe = () => {
           style={{ backgroundImage: `url(${Pic.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h2 className="text-white text-2xl font-bold">This is me</h2>
-          </div>
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="min-h[50px] col-span-2 row-span-2 col-start-4 row-start-1 rounded"
           style={{ backgroundImage: `url(${Äng.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h2 className="text-white text-2xl font-bold">Explore</h2>
-          </div>
-        </motion.div>
+        ></motion.div>
         <motion.div
-          className="bg-red-500 min-h[50px] col-span-2 row-span-3 col-start-6 row-start-1 rounded"
+          className="bg-white min-h[50px] col-span-2 row-span-3 col-start-6 row-start-1 rounded"
           style={{ backgroundImage: `url(${Landscape.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
         ></motion.div>
         <motion.div
-          className="bg-green-600 min-h[50px] col-span-2 row-span-2 col-start-6 row-start-4 rounded"
+          className="bg-white min-h[50px] col-span-2 row-span-2 col-start-6 row-start-4 rounded"
           style={{ backgroundImage: `url(${Forest.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
         ></motion.div>
         <motion.div
-          className="bg-amber-600 min-h[50px] col-span-2 row-span-3 col-start-4 row-start-3 rounded"
+          className="bg-white min-h[50px] col-span-2 row-span-3 col-start-4 row-start-3 rounded"
           style={{ backgroundImage: `url(${Brygga.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h2 className="text-white text-2xl font-bold">This is me</h2>
-          </div>
-        </motion.div>
+        ></motion.div>
         <motion.div
-          className="bg-red-200 min-h[50px] col-span-4 row-span-2 col-start-4 row-start-6 rounded"
+          className="bg-white min-h[50px] col-span-4 row-span-2 col-start-4 row-start-6 rounded"
           style={{ backgroundImage: `url(${Flowers.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
         ></motion.div>
         <motion.div
-          className="min-h[50px] col-span-3 row-span-2 row-start-6 rounded"
+          className="bg-white min-h[50px] col-span-3 row-span-2 row-start-6 rounded"
           style={{ backgroundImage: `url(${Flowers2.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
           variants={itemVariants}
           whileHover={hoverAnimation}
