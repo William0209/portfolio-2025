@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 import Äng from "../../../public/assets/äng.jpg";
 import Pic from "../../../public/assets/bild.jpg";
@@ -57,47 +58,102 @@ const AboutMe = () => {
         variants={containerVariants}
       >
         <motion.div
-          className="min-h[50px] col-span-3 row-span-5 rounded"
-          style={{ backgroundImage: `url(${Pic.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-3 row-span-5 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Pic}
+            alt="Pic"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+            style={{ filter: "brightness(0.9)" }}
+          />
+        </motion.div>
         <motion.div
-          className="min-h[50px] col-span-2 row-span-2 col-start-4 row-start-1 rounded"
-          style={{ backgroundImage: `url(${Äng.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-2 row-span-2 col-start-4 row-start-1 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Äng}
+            alt="Äng"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+        </motion.div>
         <motion.div
-          className="bg-white min-h[50px] col-span-2 row-span-3 col-start-6 row-start-1 rounded"
-          style={{ backgroundImage: `url(${Landscape.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-2 row-span-3 col-start-6 row-start-1 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Landscape}
+            alt="Landscape"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+        </motion.div>
         <motion.div
-          className="bg-white min-h[50px] col-span-2 row-span-2 col-start-6 row-start-4 rounded"
-          style={{ backgroundImage: `url(${Forest.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-2 row-span-2 col-start-6 row-start-4 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Forest}
+            alt="Forest"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+        </motion.div>
         <motion.div
-          className="bg-white min-h[50px] col-span-2 row-span-3 col-start-4 row-start-3 rounded"
-          style={{ backgroundImage: `url(${Brygga.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-2 row-span-3 col-start-4 row-start-3 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Brygga}
+            alt="Brygga"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          <div className="absolute inset-0 flex items-center justify-center z-20">
+            <h2 className="text-white text-xl font-bold">This is me</h2>
+          </div>
+        </motion.div>
         <motion.div
-          className="bg-white min-h[50px] col-span-4 row-span-2 col-start-4 row-start-6 rounded"
-          style={{ backgroundImage: `url(${Flowers.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-4 row-span-2 col-start-4 row-start-6 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Flowers}
+            alt="Flowers"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+        </motion.div>
         <motion.div
-          className="bg-white min-h[50px] col-span-3 row-span-2 row-start-6 rounded"
-          style={{ backgroundImage: `url(${Flowers2.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="relative min-h-[50px] col-span-3 row-span-2 row-start-6 rounded overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
-        ></motion.div>
+        >
+          <Image
+            src={Flowers2}
+            alt="Flowers2"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 object-cover z-0"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
