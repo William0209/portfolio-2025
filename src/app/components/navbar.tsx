@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className="relative">
       {/* Desktop Navbar */}
-      <div className="hidden md:flex items-center h-20 px-8 bg-[#e0e0e0]">
+      <div className="hidden md:flex items-center h-20 px-8 bg-[#F5F5F5]">
         <Logo />
         <div className="flex space-x-12 ml-auto">
           <Link href="/about" className="text-black text-xl hover:opacity-70 transition-opacity">
@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="flex md:hidden items-center justify-between h-20 px-6 bg-[#e0e0e0]">
+      <div className="flex md:hidden items-center justify-between h-20 px-6 bg-[#bg-[#F5F5F5]]">
         <Logo />
         <button
           onClick={toggleMenu}

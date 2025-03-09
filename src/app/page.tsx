@@ -1,8 +1,17 @@
+"use client";
+import { useEffect } from "react";
 import Navbar from "@/app/components/navbar";
 import HeroSection from "@/app/sections/hero-section";
 import BottomHero from "@/app/sections/bottom-hero";
+import AboutMe from "@/app/sections/about-me";
 
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      new LocomotiveScroll();
+    })();
+  }, []);
   return (
     <>
       <Navbar />
@@ -12,29 +21,11 @@ export default function Home() {
           <HeroSection />
           <BottomHero />
         </section>
-
-        {/* About Section */}
-        <section className="w-full py-12 md:py-24 bg-white" id="about">
-          {/* Your About Section Component */}
+        {/* About Me */}
+        <section className="w-full flex-grow">
+          <AboutMe />
         </section>
-
-        {/* Projects Section */}
-        <section className="w-full py-12 md:py-24 bg-[#e0e0e0]" id="projects">
-          {/* Your Projects Section Component */}
-        </section>
-
-        {/* Skills Section */}
-        <section className="w-full py-12 md:py-24 bg-white" id="skills">
-          {/* Your Skills Section Component */}
-        </section>
-
-        {/* Contact Section */}
-        <section className="w-full py-12 md:py-24 bg-[#e0e0e0]" id="contact">
-          {/* Your Contact Section Component */}
-        </section>
-
         {/* Footer */}
-        <footer className="w-full py-8 bg-[#343434] text-white">{/* Your Footer Component */}</footer>
       </main>
     </>
   );

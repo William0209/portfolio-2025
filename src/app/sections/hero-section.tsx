@@ -29,7 +29,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full  flex-grow min-h-[78vh] flex items-center justify-center bg-[#e0e0e0]">
+    <section className="w-full  flex-grow min-h-[78vh] flex items-center justify-center bg-[#F5F5F5]">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center mb-[rem]"
