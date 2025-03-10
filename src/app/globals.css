@@ -34,7 +34,10 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  font-family: "Satoshi-Medium", var(--font-roboto-mono);
+}
+
 h3 {
   font-family: "Satoshi-Regular", var(--font-roboto-mono);
 }
