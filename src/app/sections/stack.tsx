@@ -88,7 +88,7 @@ export default function Stack() {
         initial="hidden"
         animate={heroControls}
         variants={staggerContainer}
-        className="container mx-auto px-4 py-16 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="container mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8"
       >
         <motion.div variants={fadeIn} className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight relative">
