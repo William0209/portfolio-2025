@@ -81,7 +81,7 @@ export default function Stack() {
   const headingText = "I'M WILLIAM BASED IN STOCKHOLM.";
 
   return (
-    <section className="min-h-screen text-[#343434] ">
+    <div className="min-h-screen text-[#343434] ">
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
@@ -126,7 +126,7 @@ export default function Stack() {
       </motion.section>
 
       {/* Process Sections */}
-      <section className="container mx-auto px-4 py-10 space-y-32">
+      <div className="container mx-auto px-4 py-10 space-y-32">
         {/* Section 1 */}
         <motion.div
           ref={section1Ref}
@@ -202,7 +202,7 @@ export default function Stack() {
             </motion.p>
           </div>
         </motion.div>
-      </section>
-    </section>
+      </div>
+    </div>
   );
 }

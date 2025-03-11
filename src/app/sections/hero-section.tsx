@@ -20,14 +20,14 @@ export default function HeroSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.6,
         ease: [0.215, 0.61, 0.355, 1.0],
       },
     },
   };
 
   return (
-    <section className="w-full  flex-grow min-h-[78vh] flex items-center justify-center bg-[#F5F5F5]">
+    <div className="w-full  flex-grow min-h-[78vh] flex items-center justify-center bg-[#F5F5F5]">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center mb-[rem]"
@@ -68,6 +68,6 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
