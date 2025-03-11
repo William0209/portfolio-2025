@@ -4,6 +4,7 @@ import Navbar from "@/app/components/navbar";
 import HeroSection from "@/app/sections/hero-section";
 import BottomHero from "@/app/sections/bottom-hero";
 import AboutMe from "@/app/sections/about-me";
+import Stack from "@/app/sections/stack";
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +25,10 @@ export default function Home() {
         {/* About Me */}
         <section className="w-full flex-grow">
           <AboutMe />
+        </section>
+        {/* Stack */}
+        <section className="w-full flex-grow bg-[#F5F5F5]">
+          <Stack />
         </section>
         {/* Footer */}
       </main>

@@ -37,10 +37,10 @@ export default function HeroSection() {
         >
           <div className="space-y-2">
             <motion.h1
-              className="text-6xl font-bold tracking-wide  sm:text-6xl md:text-7xl lg:text-8xl mb-4 text-[#343434]"
+              className="text-6xl font-semibold tracking-wide  sm:text-6xl md:text-7xl lg:text-8xl mb-4 text-[#343434]"
               variants={itemVariants}
             >
-              William Janssen
+              WILLIAM JANSSEN
             </motion.h1>
             <motion.p
               className="mx-auto max-w-[700px] text-[#343434]/80 md:text-xl tracking-wide"
