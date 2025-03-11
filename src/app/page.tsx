@@ -18,19 +18,20 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center">
         {/* Hero Section */}
-        <section className="w-full flex-grow">
+        <section className="w-full min-h-screen flex-grow">
           <HeroSection />
           <BottomHero />
         </section>
         {/* About Me */}
-        <section className="w-full flex-grow">
+        <section className="w-full min-h-screen flex-grow">
           <AboutMe />
         </section>
         {/* Stack */}
-        <section className="w-full flex-grow bg-[#F5F5F5]">
+        <section className="w-full min-h-screen flex-grow bg-[#F5F5F5]">
           <Stack />
         </section>
-        {/* Footer */}
+        {/* Projects */}
+        <section className="w-full min-h-screen flex-grow bg-[#F5F5F5]"></section>
       </main>
     </>
   );
