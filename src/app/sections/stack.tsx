@@ -37,7 +37,7 @@ export default function Stack() {
 
   // Create refs for each section to detect when they're in view
   const heroRef = useRef(null);
-  const heroInView = useInView(heroRef, { once: true });
+  const heroInView = useInView(heroRef, { once: true, amount: 0.4 }); // Trigger + 40%
   const heroControls = useAnimation();
 
   const section1Ref = useRef(null);
