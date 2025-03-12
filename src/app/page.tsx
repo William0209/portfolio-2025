@@ -5,6 +5,7 @@ import HeroSection from "@/app/sections/hero-section";
 import BottomHero from "@/app/sections/bottom-hero";
 import AboutMe from "@/app/sections/about-me";
 import Stack from "@/app/sections/stack";
+import Projects from "@/app/sections/projects";
 
 export default function Home() {
   useEffect(() => {
@@ -31,7 +32,9 @@ export default function Home() {
           <Stack />
         </section>
         {/* Projects */}
-        <section className="w-full min-h-screen flex-grow bg-[#F5F5F5]"></section>
+        <section className="w-full min-h-screen flex-grow bg-[#343434] flex items-center justify-center">
+          <Projects />
+        </section>
       </main>
     </>
   );

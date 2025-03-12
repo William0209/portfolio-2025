@@ -43,9 +43,9 @@ const hoverAnimation = {
 const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    once: true, // Only trigger the animation once
-    amount: 0.3, // Trigger when 30% of the element is in view
-    margin: "0px 0px -100px 0px", // Optional: negative bottom margin to trigger earlier
+    once: true,
+    amount: 0.3, // Trigger + 30%
+    margin: "0px 0px -100px 0px",
   });
 
   return (
