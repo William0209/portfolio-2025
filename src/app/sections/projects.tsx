@@ -11,17 +11,17 @@ const projects = [
   },
   {
     id: 2,
-    title: "TastyBites",
-    tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
+    title: "Portfolio",
+    tech: ["Next", "Tailwind", "Framer Motion", "Figma"],
   },
   {
     id: 3,
-    title: "TastyBites",
-    tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
+    title: "Notex",
+    tech: ["Next", "Tailwind"],
   },
   {
     id: 4,
-    title: "TastyBites",
+    title: "GymTrack - (in development)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
   },
 ];
