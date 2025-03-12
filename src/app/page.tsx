@@ -6,6 +6,7 @@ import BottomHero from "@/app/sections/bottom-hero";
 import AboutMe from "@/app/sections/about-me";
 import Stack from "@/app/sections/stack";
 import Projects from "@/app/sections/projects";
+import Footer from "@/app/sections/footer";
 
 export default function Home() {
   useEffect(() => {
@@ -35,6 +36,8 @@ export default function Home() {
         <section className="w-full min-h-screen flex-grow bg-[#343434] flex items-center justify-center">
           <Projects />
         </section>
+        {/* Footer */}
+        <Footer />
       </main>
     </>
   );
