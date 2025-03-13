@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
-import { FiFacebook, FiInstagram, FiMail, FiMapPin, FiPhone, FiTwitter } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,8 +29,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#F5F5F5] mt-12 py-12 px-4 md:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
+    <footer className="w-full bg-[#F5F5F5] py-12 px-4 md:px-6 lg:px-8 flex">
+      <div className="container mx-auto max-w-7xl justify-center items-center">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
@@ -40,7 +40,7 @@ export default function Footer() {
         >
           {/* Company Info */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-800">Company</h3>
+            <h3 className="text-lg font-semibold text-gray-800">Me</h3>
             <motion.div
               className="h-1 w-10 bg-primary rounded"
               initial={{ width: 0 }}
@@ -49,17 +49,13 @@ export default function Footer() {
               transition={{ delay: 0.5 }}
             />
             <p className="text-gray-600 max-w-xs">
-              We&apos;re dedicated to providing innovative solutions that help businesses thrive in the digital
-              landscape.
+              I&apos;m thrilled to be able to showcase some of my work as of latest. I hope you enjoy it as much as I
+              enjoyed creating it.
             </p>
             <div className="flex space-x-4">
               <motion.a href="#" whileHover={{ y: -5, color: "#4267B2" }} className="text-gray-500 hover:text-gray-700">
                 <FiFacebook size={20} />
                 <span className="sr-only">Facebook</span>
-              </motion.a>
-              <motion.a href="#" whileHover={{ y: -5, color: "#1DA1F2" }} className="text-gray-500 hover:text-gray-700">
-                <FiTwitter size={20} />
-                <span className="sr-only">Twitter</span>
               </motion.a>
               <motion.a href="#" whileHover={{ y: -5, color: "#E1306C" }} className="text-gray-500 hover:text-gray-700">
                 <FiInstagram size={20} />
@@ -83,7 +79,7 @@ export default function Footer() {
               transition={{ delay: 0.5 }}
             />
             <ul className="space-y-2">
-              {["Home", "About", "Services", "Portfolio", "Blog", "Careers"].map((item, index) => (
+              {["Home", "About", "Stack", "Projects"].map((item, index) => (
                 <motion.li key={index} whileHover={{ x: 5 }}>
                   <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
                     {item}
@@ -104,26 +100,21 @@ export default function Footer() {
               transition={{ delay: 0.5 }}
             />
             <ul className="space-y-2">
-              {[
-                "Web Development",
-                "Mobile Apps",
-                "UI/UX Design",
-                "Digital Marketing",
-                "Cloud Services",
-                "Consulting",
-              ].map((item, index) => (
-                <motion.li key={index} whileHover={{ x: 5 }}>
-                  <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
-                    {item}
-                  </Link>
-                </motion.li>
-              ))}
+              {["Web Development", "SEO", "UI/UX Design", "Digital Marketing", "Sales", "Team Lead"].map(
+                (item, index) => (
+                  <motion.li key={index} whileHover={{ x: 5 }}>
+                    <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
+                      {item}
+                    </Link>
+                  </motion.li>
+                )
+              )}
             </ul>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-800">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-gray-800">Contact Me</h3>
             <motion.div
               className="h-1 w-10 bg-primary rounded"
               initial={{ width: 0 }}
@@ -134,15 +125,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FiMapPin className="text-primary mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-600">123 Business Avenue, Suite 100, New York, NY 10001</span>
+                <span className="text-gray-600">Stockholm</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FiPhone className="text-primary flex-shrink-0" size={18} />
-                <span className="text-gray-600">+1 (555) 123-4567</span>
+                <span className="text-gray-600">+46 768020997</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FiMail className="text-primary flex-shrink-0" size={18} />
-                <span className="text-gray-600">contact@wj.com</span>
+                <span className="text-gray-600">janssenwilliam02@gmail.com</span>
               </li>
             </ul>
           </motion.div>
@@ -150,7 +141,7 @@ export default function Footer() {
 
         {/* Divider */}
         <motion.div
-          className="h-px w-full bg-gray-200 my-8"
+          className="h-px w-full bg-gray-400 my-8"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -168,13 +159,10 @@ export default function Footer() {
           <p className="text-gray-600 text-sm">© {currentYear} WILLIAM JANSSEN. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-gray-600 hover:text-primary">
-              Privacy Policy
+              Follow Me On Github
             </Link>
             <Link href="#" className="text-sm text-gray-600 hover:text-primary">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-sm text-gray-600 hover:text-primary">
-              Cookie Policy
+              Have a nice day!
             </Link>
           </div>
         </motion.div>
