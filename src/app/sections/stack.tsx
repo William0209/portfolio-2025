@@ -77,8 +77,7 @@ export default function Stack() {
     section3Controls,
   ]);
 
-  // Text for typing animation
-  const headingText = "I'M WILLIAM BASED IN STOCKHOLM.";
+  const headingText = "I'M WILLIAM\nBASED IN STOCKHOLM.";
 
   return (
     <div className="min-h-screen text-[#343434] ">
@@ -91,7 +90,7 @@ export default function Stack() {
         className="container mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8"
       >
         <motion.div variants={fadeIn} className="space-y-4">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight relative">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight relative whitespace-pre-line">
             {headingText.split("").map((letter, index) => (
               <motion.span
                 key={index}
@@ -99,9 +98,9 @@ export default function Stack() {
                 variants={letterVariants}
                 initial="hidden"
                 animate={heroInView ? "visible" : "hidden"}
-                style={{ display: "inline" }}
+                style={{ display: letter === "\n" ? "block" : "inline" }}
               >
-                {letter}
+                {letter === "\n" ? "" : letter}
                 {index === headingText.length - 1 && (
                   <motion.span
                     className="inline-block w-[3px] h-[0.7em] bg-[#343434] ml-[1px] align-middle"
