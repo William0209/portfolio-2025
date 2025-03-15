@@ -26,7 +26,9 @@ export default function Home() {
           <BottomHero />
         </section>
         {/* Welcome */}
-        <Welcome />
+        <div className="block sm:hidden w-full">
+          <Welcome />
+        </div>
         {/* About Me */}
         <section className="w-full min-h-screen hidden lg:flex flex-grow">
           <AboutMe />

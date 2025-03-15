@@ -125,7 +125,7 @@ export default function Stack() {
       </motion.section>
 
       {/* Process Sections */}
-      <div className="container mx-auto px-4 py-0 md:py-10 space-y-16 md:space-y-32">
+      <div className="container mx-auto px-4 pt-6 md:py-10 space-y-16 md:space-y-32">
         {/* Section 1 */}
         <motion.div
           ref={section1Ref}
@@ -146,7 +146,7 @@ export default function Stack() {
             </div>
           </div>
           <div className="md:col-span-9 space-y-4">
-            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-semibold">
+            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-bold">
               TECH STACK
             </motion.h2>
             <motion.p variants={fadeIn} className="text-sm md:text-base opacity-80 max-w-2xl">
@@ -176,7 +176,7 @@ export default function Stack() {
             </div>
           </div>
           <div className="md:col-span-9 pb-[6rem] md:pb-0">
-            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-semibold">
+            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-bold">
               EXPERIENCE
             </motion.h2>
             <motion.h3 variants={fadeIn} className="text-xl md:text-xl mt-8 font-semibold">
@@ -194,10 +194,10 @@ export default function Stack() {
               Vakansa – Full-Stack Developer
             </motion.h3>
             <motion.p variants={fadeIn} className="text-sm md:text-base opacity-80 max-w-2xl mt-4">
-              Worked on optimization, significantly reducing costs by improving image handling with Cloudinary. Fixed
-              self-canonicals, improving SEO performance from 90 to 96. Ensured consistency and a high-quality visual
-              experience across the application. Focused on website performance, accessibility (WCAG AA compliance),
-              SEO, and overall user experience. Tech stack included React, CSS, Node.js, and MongoDB.
+              Worked on optimization, significantly reducing costs by improving image handling with Cloudinary. Resolved
+              self-referencing canonical tags, improving SEO performance to 96. Ensured consistency and a high-quality
+              visual experience across the application. Focused on website performance, accessibility (WCAG AA
+              compliance), SEO, and overall user experience. Tech stack included React, CSS, Node.js, and MongoDB.
             </motion.p>
           </div>
         </motion.div>

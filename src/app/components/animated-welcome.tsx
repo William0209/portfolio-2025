@@ -22,7 +22,7 @@ export default function AnimatedWelcome() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#343434] py-6 mt-[-4rem] mb-14">
+    <div className="relative w-full overflow-hidden bg-[#343434] py-6 mt-[-3.5rem] mb-[4rem]">
       <motion.div
         key={currentIndex}
         initial={{ x: "100%" }}

@@ -6,7 +6,7 @@ import { useRef } from "react";
 const projects = [
   {
     id: 1,
-    title: "TastyBites",
+    title: "TastyBites - (in deployment)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
   },
   {
@@ -16,12 +16,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "Notex",
+    title: "Notex - (in development)",
     tech: ["Next", "Tailwind"],
   },
   {
     id: 4,
-    title: "GymTrack - (in development)",
+    title: "GymTrack - (coming soon)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
   },
 ];
