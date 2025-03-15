@@ -19,10 +19,10 @@ export default function Navbar() {
   };
 
   // Navigation items
-  const navItems = ["about", "stack", "projects", "Contact Me"];
+  const navItems = ["about", "stack", "projects", "contact me"];
 
   return (
-    <nav className="relative">
+    <nav className="relative bg-[#F5F5F5]">
       {/* Desktop Navbar */}
       <div className="hidden md:flex items-center h-20 px-8 bg-[#F5F5F5]">
         <Logo />
@@ -119,7 +119,7 @@ export default function Navbar() {
                   }}
                 >
                   <Link
-                    href={item === "Contact Me" ? "/contact" : `/${item.toLowerCase()}`}
+                    href={item === "contact me" ? "/contact" : `/${item.toLowerCase()}`}
                     className="text-black text-2xl hover:opacity-70 transition-opacity"
                     onClick={toggleMenu}
                   >

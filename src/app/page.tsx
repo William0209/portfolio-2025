@@ -7,6 +7,7 @@ import AboutMe from "@/app/sections/about-me";
 import Stack from "@/app/sections/stack";
 import Projects from "@/app/sections/projects";
 import Footer from "@/app/sections/footer";
+import Welcome from "@/app/components/animated-welcome";
 
 export default function Home() {
   useEffect(() => {
@@ -20,12 +21,14 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center">
         {/* Hero Section */}
-        <section className="w-full min-h-screen flex-grow">
+        <section className="w-full min-h-screen flex-grow bg-[#F5F5F5]">
           <HeroSection />
           <BottomHero />
         </section>
+        {/* Welcome */}
+        <Welcome />
         {/* About Me */}
-        <section className="w-full min-h-screen flex-grow">
+        <section className="w-full min-h-screen hidden lg:flex flex-grow">
           <AboutMe />
         </section>
         {/* Stack */}
