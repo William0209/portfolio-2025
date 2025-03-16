@@ -125,7 +125,7 @@ const AboutMe = () => {
           />
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           <div className="absolute inset-0 flex items-center justify-center z-20">
-            <h2 className="text-white text-xl font-bold">This is me</h2>
+            <h2 className="text-white text-xl font-bold">This Is Me</h2>
           </div>
         </motion.div>
         <motion.div
