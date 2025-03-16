@@ -46,7 +46,7 @@ export default function HeroSection() {
               className="mx-auto max-w-[700px] text-[#343434]/80 md:text-xl tracking-wide"
               variants={itemVariants}
             >
-              Professional developer crafting elegant digital experiences
+              Full-stack problem solver driven by creativity and attention to detail
             </motion.p>
           </div>
           <motion.div

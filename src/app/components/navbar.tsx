@@ -19,21 +19,26 @@ export default function Navbar() {
   };
 
   // Navigation items
-  const navItems = ["about", "stack", "projects", "Contact Me"];
+  const navItems = [
+    { name: "about", href: "/#about" },
+    { name: "stack", href: "/#stack" },
+    { name: "projects", href: "/#projects" },
+    { name: "contact me", href: "/#footer" },
+  ];
 
   return (
-    <nav className="relative">
+    <nav className="relative bg-[#F5F5F5]">
       {/* Desktop Navbar */}
       <div className="hidden md:flex items-center h-20 px-8 bg-[#F5F5F5]">
         <Logo />
         <div className="flex space-x-12 ml-auto">
-          <Link href="/about" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link href="/#about" className="text-black text-xl hover:opacity-70 transition-opacity">
             about
           </Link>
-          <Link href="/stack" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link href="/#stack" className="text-black text-xl hover:opacity-70 transition-opacity">
             stack
           </Link>
-          <Link href="/projects" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link href="/#projects" className="text-black text-xl hover:opacity-70 transition-opacity">
             projects
           </Link>
         </div>
@@ -98,7 +103,7 @@ export default function Navbar() {
             >
               {navItems.map((item) => (
                 <motion.div
-                  key={item}
+                  key={item.name}
                   variants={{
                     open: {
                       y: 0,
@@ -119,11 +124,11 @@ export default function Navbar() {
                   }}
                 >
                   <Link
-                    href={item === "Contact Me" ? "/contact" : `/${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-black text-2xl hover:opacity-70 transition-opacity"
                     onClick={toggleMenu}
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </motion.div>
               ))}
