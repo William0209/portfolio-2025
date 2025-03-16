@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const messages = [
+  "Välkommen Till Min Portfölj",
   "Welcome To My Portfolio",
   "Bienvenido a mi portafolio",
   "Bienvenue dans mon portfolio",
