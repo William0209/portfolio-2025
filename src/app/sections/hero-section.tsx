@@ -62,7 +62,7 @@ export default function HeroSection() {
               },
             }}
           >
-            <Link href="#contact">
+            <Link href="#footer">
               <Button text="Contact Me" />
             </Link>
           </motion.div>

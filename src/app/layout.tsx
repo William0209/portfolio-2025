@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -43,7 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}>{children}</body>
+      <body className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
