@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 const projects = [
@@ -8,21 +9,25 @@ const projects = [
     id: 1,
     title: "TastyBites - (in deployment)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
+    url: "https://notex.example.com",
   },
   {
     id: 2,
     title: "Portfolio",
     tech: ["Next", "Tailwind", "Framer Motion", "Figma"],
+    url: "https://notex.example.com",
   },
   {
     id: 3,
     title: "Notex - (in development)",
     tech: ["Next", "Tailwind"],
+    url: "https://notex.example.com",
   },
   {
     id: 4,
     title: "GymTrack - (coming soon)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
+    url: "https://gymtrack.example.com",
   },
 ];
 
@@ -86,24 +91,26 @@ export default function Projects() {
           className="grid grid-cols-1 gap-8 md:grid-cols-2"
         >
           {projects.map((project) => (
-            <motion.div key={project.id} variants={item} whileHover={{ scale: 1.01 }} className="space-y-3">
-              <motion.div
-                whileHover={{ opacity: 0.8 }}
-                className="aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5]"
-              />
-              <motion.h3
-                className="text-lg font-medium text-[#F5F5F5]"
-                whileHover={{ x: 4 }}
-                transition={{ duration: 0.2 }}
-              >
-                {project.title}
-              </motion.h3>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech, index) => (
-                  <TechBadge key={index} tech={tech} index={index} />
-                ))}
-              </div>
-            </motion.div>
+            <Link key={project.id} href={project.url} passHref>
+              <motion.div key={project.id} variants={item} whileHover={{ scale: 1.01 }} className="space-y-3">
+                <motion.div
+                  whileHover={{ opacity: 0.8 }}
+                  className="aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5]"
+                />
+                <motion.h3
+                  className="text-lg font-medium text-[#F5F5F5]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {project.title}
+                </motion.h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, index) => (
+                    <TechBadge key={index} tech={tech} index={index} />
+                  ))}
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
