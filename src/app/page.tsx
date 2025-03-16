@@ -42,7 +42,9 @@ export default function Home() {
           <Projects />
         </section>
         {/* Footer */}
-        <Footer />
+        <div id="footer">
+          <Footer />
+        </div>
       </main>
     </>
   );
