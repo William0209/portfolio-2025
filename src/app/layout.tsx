@@ -23,8 +23,17 @@ const satoshiRegular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "WJ - Portfolio",
-  description: "My portfolio for 2025",
+  title: "William Janssen | Fullstack Web Developer Portfolio Site",
+  description:
+    "Stockholm-based fullstack developer specializing in Next.js. Passionate about building web apps with clean code and great performance. Check out my projects!",
+  keywords: ["web development", "Fullstack Developer", "React", "Next.js", "William Janssen"],
+  openGraph: {
+    title: "William Janssen | Portfolio",
+    description: "Fullstack developer based in Stockholm",
+    type: "website",
+  },
+  robots: "index",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({

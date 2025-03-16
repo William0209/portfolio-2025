@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
-import { FiFacebook, FiInstagram, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiMail, FiMapPin, FiPhone, FiGithub } from "react-icons/fi";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -53,17 +53,45 @@ export default function Footer() {
               enjoyed creating it.
             </p>
             <div className="flex space-x-4">
-              <motion.a href="#" whileHover={{ y: -5, color: "#4267B2" }} className="text-gray-500 hover:text-gray-700">
+              <motion.a
+                href="https://www.facebook.com/profile.php?id=100011510287314&locale=sv_SE"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5, color: "#4267B2" }}
+                className="text-gray-500 hover:text-gray-700"
+              >
                 <FiFacebook size={20} />
                 <span className="sr-only">Facebook</span>
               </motion.a>
-              <motion.a href="#" whileHover={{ y: -5, color: "#E1306C" }} className="text-gray-500 hover:text-gray-700">
+              <motion.a
+                href="https://www.instagram.com/02willej/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5, color: "#E1306C" }}
+                className="text-gray-500 hover:text-gray-700"
+              >
                 <FiInstagram size={20} />
                 <span className="sr-only">Instagram</span>
               </motion.a>
-              <motion.a href="#" whileHover={{ y: -5, color: "#0077B5" }} className="text-gray-500 hover:text-gray-700">
+              <motion.a
+                href="https://www.linkedin.com/in/william-janssen-b944a32b6/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5, color: "#0077B5" }}
+                className="text-gray-500 hover:text-gray-700"
+              >
                 <CiLinkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
+              </motion.a>
+              <motion.a
+                href="https://github.com/William0209"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5, color: "#F778BA " }}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <FiGithub size={20} />
+                <span className="sr-only">Github</span>
               </motion.a>
             </div>
           </motion.div>
@@ -79,10 +107,15 @@ export default function Footer() {
               transition={{ delay: 0.5 }}
             />
             <ul className="space-y-2">
-              {["Home", "About", "Stack", "Projects"].map((item, index) => (
+              {[
+                { name: "Home", href: "/#home" },
+                { name: "About", href: "/#about" },
+                { name: "Stack", href: "/#stack" },
+                { name: "Projects", href: "/#projects" },
+              ].map((item, index) => (
                 <motion.li key={index} whileHover={{ x: 5 }}>
-                  <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
-                    {item}
+                  <Link href={item.href} className="text-gray-600 hover:text-primary transition-colors">
+                    {item.name}
                   </Link>
                 </motion.li>
               ))}
