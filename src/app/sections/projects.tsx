@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     title: "Portfolio",
     tech: ["Next", "Tailwind", "Framer Motion", "Figma"],
-    url: "https://notex.example.com",
+    url: "www.wj-portfolio.dev",
   },
   {
     id: 3,
