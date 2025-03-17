@@ -7,7 +7,7 @@ import { useRef } from "react";
 const projects = [
   {
     id: 1,
-    title: "TastyBites - (in deployment)",
+    title: "TastyBites - (live soon)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
     url: "https://notex.example.com",
   },
