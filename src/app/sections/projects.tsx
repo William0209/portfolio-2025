@@ -99,12 +99,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Link key={project.id} href={project.url} passHref>
-              <motion.div
-                variants={item}
-                className="space-y-3 group"
-                // Removed the scale hover effect
-              >
-                {/* Image container with simplified styling */}
+              <motion.div variants={item} className="space-y-3 group">
                 <div className="relative aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5]">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -112,7 +107,7 @@ export default function Projects() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority={project.id <= 2}
-                    className="object-cover" // Removed the scale effect
+                    className="object-cover"
                     style={{
                       position: "absolute",
                       height: "100%",
@@ -120,7 +115,7 @@ export default function Projects() {
                     }}
                   />
                 </div>
-                {/* Title with group-hover effect to move right */}
+
                 <h3 className="text-lg font-medium text-[#F5F5F5] transition-transform duration-200 group-hover:translate-x-2">
                   {project.title}
                 </h3>
