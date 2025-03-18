@@ -3,6 +3,9 @@
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
+import NextPic from "../../../public/assets/nextjs.png";
+import PortfolioPic from "../../../public/assets/portfolio-pic.png";
+import Image from "next/image";
 
 const projects = [
   {
@@ -10,24 +13,28 @@ const projects = [
     title: "TastyBites - (live soon)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
     url: "https://notex.example.com",
+    image: NextPic,
   },
   {
     id: 2,
     title: "Portfolio",
     tech: ["Next", "Tailwind", "Framer Motion", "Figma"],
     url: "/",
+    image: PortfolioPic,
   },
   {
     id: 3,
     title: "Notex - (in development)",
     tech: ["Next", "Tailwind"],
     url: "https://notex.example.com",
+    image: NextPic,
   },
   {
     id: 4,
     title: "GymTrack - (coming soon)",
     tech: ["Next", "Tailwind", "Framer Motion", "node", "MongoDB"],
     url: "https://gymtrack.example.com",
+    image: NextPic,
   },
 ];
 
@@ -92,11 +99,20 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Link key={project.id} href={project.url} passHref>
-              <motion.div key={project.id} variants={item} whileHover={{ scale: 1.01 }} className="space-y-3">
+              <motion.div key={project.id} variants={item} className="space-y-3">
+                {/* whileHover={{ scale: 1.01 }} */}
                 <motion.div
-                  whileHover={{ opacity: 0.8 }}
+                  // whileHover={{ opacity: 0.8 }}
                   className="aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5]"
-                />
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="overflow-hidden "
+                  />
+                </motion.div>
                 <motion.h3
                   className="text-lg font-medium text-[#F5F5F5]"
                   whileHover={{ x: 4 }}
