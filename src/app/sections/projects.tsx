@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import NextPic from "../../../public/assets/nextjs.png";
-import PortfolioPic from "../../../public/assets/portfolio-pic.png";
+import PortfolioPic from "../../../public/assets/porto-pic.png";
 import Image from "next/image";
 
 const projects = [
@@ -87,6 +87,12 @@ export default function Projects() {
     },
   };
 
+  // Animation for the image container only
+  const imageContainer = {
+    initial: { opacity: 1 },
+    hover: { opacity: 0.9 },
+  };
+
   return (
     <section className="w-full py-12">
       <div className="container px-4 mx-auto">
@@ -99,18 +105,47 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Link key={project.id} href={project.url} passHref>
-              <motion.div key={project.id} variants={item} className="space-y-3">
-                {/* whileHover={{ scale: 1.01 }} */}
+              <motion.div
+                variants={item}
+                className="space-y-3 group"
+                whileHover={{ scale: 1.01 }}
+                transition={{
+                  scale: { duration: 0.3 },
+                  // Ensure animations don't interfere with each other
+                  layout: { duration: 0 },
+                }}
+              >
+                {/* Image container with its own animation scope */}
                 <motion.div
-                  // whileHover={{ opacity: 0.8 }}
-                  className="aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5]"
+                  className="relative aspect-square overflow-hidden rounded-2xl bg-[#F5F5F5] will-change-transform"
+                  variants={imageContainer}
+                  initial="initial"
+                  whileHover="hover"
+                  // Ensure this animation doesn't affect child elements
+                  style={{
+                    // Create a new stacking context
+                    isolation: "isolate",
+                    // Ensure hardware acceleration
+                    transform: "translateZ(0)",
+                  }}
                 >
                   <Image
-                    src={project.image}
+                    src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="overflow-hidden "
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={project.id <= 2} // Prioritize loading first two images
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{
+                      // Ensure image stays visible during animations
+                      position: "absolute",
+                      height: "100%",
+                      width: "100%",
+                      // Prevent image from being affected by parent animations
+                      willChange: "transform",
+                      // Ensure hardware acceleration
+                      transform: "translateZ(0)",
+                    }}
                   />
                 </motion.div>
                 <motion.h3
