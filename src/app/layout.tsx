@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import ogImage from "../../public/assets/OG-Image.png";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -30,12 +31,34 @@ export const metadata: Metadata = {
     "Stockholm-based fullstack developer specializing in Next.js. Passionate about building web apps with clean code and great performance. Check out my projects!",
   keywords: ["web development", "Fullstack Developer", "React", "Next.js", "William Janssen"],
   openGraph: {
-    title: "William Janssen | Portfolio",
-    description: "Fullstack developer based in Stockholm",
+    title: "William Janssen | Fullstack Web Developer Portfolio",
+    description:
+      "Stockholm-based fullstack developer specializing in Next.js, React, and modern web technologies. Building high-performance web applications with clean code.",
     type: "website",
+    url: "https://www.wj-portfolio.dev/",
+    siteName: "William Janssen Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: ogImage.src,
+        width: 1200,
+        height: 630,
+        alt: "William Janssen - Fullstack Web Developer",
+      },
+    ],
   },
-  robots: "index",
+  twitter: {
+    card: "summary_large_image",
+    title: "William Janssen | Fullstack Web Developer",
+    description: "Stockholm-based fullstack developer specializing in Next.js and modern web technologies.",
+    images: [ogImage.src],
+  },
+  robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
+  authors: [{ name: "William Janssen" }],
+  creator: "William Janssen",
+  publisher: "William Janssen",
+  category: "Technology",
 };
 
 export default function RootLayout({
@@ -43,8 +66,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "William Janssen",
+    jobTitle: "Fullstack Web Developer",
+    description: "Stockholm-based fullstack developer specializing in Next.js, React, and modern web technologies",
+    url: "https://www.wj-portfolio.dev/",
+    sameAs: ["https://github.com/williamjanssen", "https://linkedin.com/in/williamjanssen"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Stockholm",
+      addressCountry: "Sweden",
+    },
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Framer Motion",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development",
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Vakansa AB",
+    },
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </head>
       <body className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}>
         {children}
         <SpeedInsights />
