@@ -8,11 +8,11 @@ const projects = [
   {
     id: 1,
     title: "TastyBites",
-    subtitle: "Food Delivery Platform",
+    subtitle: "Recipe Platform",
     status: "Coming Soon",
     tech: ["Next", "Tailwind", "Framer Motion", "Node", "MongoDB"],
     url: "https://tastybites.example.com",
-    gradient: "from-white via-green-400 to-green-800",
+    gradient: "from-white via-green-300 to-green-800",
     textColor: "text-white",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     status: "Live",
     tech: ["Next", "Tailwind", "Framer Motion", "Figma"],
     url: "/",
-    gradient: "from-[#F5F5F5] via-gray-400 to-indigo-[#343434]",
+    gradient: "from-[#F5F5F5] via-gray-450 to-[#343434]",
     textColor: "text-white",
   },
   {
@@ -30,19 +30,19 @@ const projects = [
     title: "Notex",
     subtitle: "Note Taker",
     status: "In Development",
-    tech: ["Next", "Tailwind", "TypeScript"],
+    tech: ["Next", "Tailwind", "TypeScript", "TipTap"],
     url: "https://notex.example.com",
-    gradient: "from-white via-blue-300 to-purple-400",
+    gradient: "from-white via-blue-300 to-blue-900",
     textColor: "text-white",
   },
   {
     id: 4,
-    title: "GymTrack",
-    subtitle: "Fitness Tracker",
-    status: "Coming Soon",
-    tech: ["Next", "Tailwind", "Framer Motion", "Node", "MongoDB"],
-    url: "https://gymtrack.example.com",
-    gradient: "from-yellow-400 via-orange-500 to-red-500",
+    title: "Todoz",
+    subtitle: "Todo App",
+    status: "Live",
+    tech: ["Next", "Tailwind", "Framer Motion"],
+    url: "https://todo-indol-mu.vercel.app/",
+    gradient: "from-gray-700 via-[#343434] to-red-500",
     textColor: "text-white",
   },
 ];
@@ -64,7 +64,7 @@ function TechBadge({ tech, index }: TechBadgeProps) {
       transition={{
         delay: index * 0.12,
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94], // Custom easing for smoothness
+        ease: [0.25, 0.46, 0.45, 0.94],
       }}
       whileHover={{
         scale: 1.08,
@@ -134,7 +134,7 @@ export default function Projects() {
           className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10"
         >
           {projects.map((project) => {
-            const isClickable = project.id === 2; // Only Portfolio is clickable
+            const isClickable = project.id === 2 || project.id === 4; // Portfolio and Todoz are clickable
 
             const cardContent = (
               <motion.div
