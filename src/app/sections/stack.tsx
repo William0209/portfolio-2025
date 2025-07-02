@@ -80,7 +80,7 @@ export default function Stack() {
   const headingText = "I'M WILLIAM\nBASED IN STOCKHOLM.";
 
   return (
-    <div className="min-h-screen text-[#343434] ">
+    <div className="min-h-screen text-[#343434] pb-12 md:pb-16 lg:pb-24 xl:pb-32">
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
