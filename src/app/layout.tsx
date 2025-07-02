@@ -73,7 +73,7 @@ export default function RootLayout({
     jobTitle: "Fullstack Web Developer",
     description: "Stockholm-based fullstack developer specializing in Next.js, React, and modern web technologies",
     url: "https://www.wj-portfolio.dev/",
-    sameAs: ["https://github.com/williamjanssen", "https://linkedin.com/in/williamjanssen"],
+    sameAs: ["https://github.com/William0209", "https://www.linkedin.com/in/william-janssen26/"],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Stockholm",
