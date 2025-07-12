@@ -29,9 +29,9 @@ const projects = [
     id: 3,
     title: "Notex",
     subtitle: "Note Taker",
-    status: "In Development",
+    status: "Live",
     tech: ["Next", "Tailwind", "TypeScript", "TipTap"],
-    url: "https://notex.example.com",
+    url: "https://notex-flax.vercel.app/",
     gradient: "from-white via-blue-300 to-blue-900",
     textColor: "text-white",
   },
@@ -134,7 +134,7 @@ export default function Projects() {
           className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10"
         >
           {projects.map((project) => {
-            const isClickable = project.id === 2 || project.id === 4; // Portfolio and Todoz are clickable
+            const isClickable = project.id === 2 || project.id === 3 || project.id === 4; // Portfolio, Notex and Todoz are clickable
 
             const cardContent = (
               <motion.div
