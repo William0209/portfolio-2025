@@ -125,6 +125,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
         <SpeedInsights />

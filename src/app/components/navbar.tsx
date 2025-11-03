@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, cubicBezier } from "framer-motion";
 import Logo from "./logo";
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
   // Shared animation configuration
   const transition = {
     duration: 0.4,
-    ease: [0.25, 0.1, 0.25, 1],
+    ease: cubicBezier(0.25, 0.1, 0.25, 1),
   };
 
   // Navigation items
@@ -32,13 +32,22 @@ export default function Navbar() {
       <div className="hidden md:flex items-center h-20 px-8 bg-[#F5F5F5]">
         <Logo />
         <div className="flex space-x-12 ml-auto">
-          <Link href="/#about" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link
+            href="/#about"
+            className="text-black text-xl hover:opacity-70 transition-opacity"
+          >
             about
           </Link>
-          <Link href="/#stack" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link
+            href="/#stack"
+            className="text-black text-xl hover:opacity-70 transition-opacity"
+          >
             stack
           </Link>
-          <Link href="/#projects" className="text-black text-xl hover:opacity-70 transition-opacity">
+          <Link
+            href="/#projects"
+            className="text-black text-xl hover:opacity-70 transition-opacity"
+          >
             projects
           </Link>
         </div>
@@ -53,12 +62,20 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <motion.span
-            animate={isMenuOpen ? { rotate: 45, y: 6, width: "24px" } : { rotate: 0, y: 0, width: "24px" }}
+            animate={
+              isMenuOpen
+                ? { rotate: 45, y: 6, width: "24px" }
+                : { rotate: 0, y: 0, width: "24px" }
+            }
             transition={transition}
             className="h-0.5 bg-black absolute origin-center"
           />
           <motion.span
-            animate={isMenuOpen ? { rotate: -45, y: 6, width: "24px" } : { rotate: 0, y: 12, width: "24px" }}
+            animate={
+              isMenuOpen
+                ? { rotate: -45, y: 6, width: "24px" }
+                : { rotate: 0, y: 12, width: "24px" }
+            }
             transition={transition}
             className="h-0.5 bg-black absolute origin-center"
           />
@@ -109,7 +126,10 @@ export default function Navbar() {
                       y: 0,
                       opacity: 1,
                       transition: {
-                        y: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }, // Updated duration
+                        y: {
+                          duration: 0.4,
+                          ease: cubicBezier(0.25, 0.1, 0.25, 1),
+                        }, // Updated duration
                         opacity: { duration: 0.3 }, // Updated duration
                       },
                     },
@@ -117,7 +137,10 @@ export default function Navbar() {
                       y: 20,
                       opacity: 0,
                       transition: {
-                        y: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }, // Updated duration
+                        y: {
+                          duration: 0.4,
+                          ease: cubicBezier(0.25, 0.1, 0.25, 1),
+                        }, // Updated duration
                         opacity: { duration: 0.3 }, // Updated duration
                       },
                     },
