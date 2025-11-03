@@ -4,7 +4,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import ogImage from "../../public/assets/OG-Image.png";
+
+// Import OG image as a static asset
+const ogImageUrl = "/assets/OG-Image.png";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -29,7 +31,13 @@ export const metadata: Metadata = {
   title: "William Janssen | Fullstack Web Developer Portfolio Site",
   description:
     "Stockholm-based fullstack developer specializing in Next.js. Passionate about building web apps with clean code and great performance. Check out my projects!",
-  keywords: ["web development", "Fullstack Developer", "React", "Next.js", "William Janssen"],
+  keywords: [
+    "web development",
+    "Fullstack Developer",
+    "React",
+    "Next.js",
+    "William Janssen",
+  ],
   openGraph: {
     title: "William Janssen | Fullstack Web Developer Portfolio",
     description:
@@ -40,7 +48,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: ogImage.src,
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "William Janssen - Fullstack Web Developer",
@@ -50,8 +58,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "William Janssen | Fullstack Web Developer",
-    description: "Stockholm-based fullstack developer specializing in Next.js and modern web technologies.",
-    images: [ogImage.src],
+    description:
+      "Stockholm-based fullstack developer specializing in Next.js and modern web technologies.",
+    images: [ogImageUrl],
   },
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
@@ -71,9 +80,13 @@ export default function RootLayout({
     "@type": "Person",
     name: "William Janssen",
     jobTitle: "Fullstack Web Developer",
-    description: "Stockholm-based fullstack developer specializing in Next.js, React, and modern web technologies",
+    description:
+      "Stockholm-based fullstack developer specializing in Next.js, React, and modern web technologies",
     url: "https://www.wj-portfolio.dev/",
-    sameAs: ["https://github.com/William0209", "https://www.linkedin.com/in/william-janssen26/"],
+    sameAs: [
+      "https://github.com/William0209",
+      "https://www.linkedin.com/in/william-janssen26/",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Stockholm",
@@ -100,9 +113,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="bPpfqo3HoYyA7KRlHlWunw"
+          async
+        />
       </head>
-      <body className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}>
+      <body
+        className={`${robotoMono.variable} ${satoshiRegular.variable} antialiased`}
+      >
         {children}
         <SpeedInsights />
         <Analytics />
