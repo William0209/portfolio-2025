@@ -64,7 +64,7 @@ function TechBadge({ tech, index }: TechBadgeProps) {
       transition={{
         delay: index * 0.08,
         duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       }}
       whileHover={{ y: -1 }}
       className="rounded-full bg-transparent px-2 sm:px-3 py-1 text-xs sm:text-sm text-[#F5F5F5]/40 border border-[#F5F5F5]/15 hover:text-[#F5F5F5]/80 hover:border-[#F5F5F5]/40 transition-colors duration-200 ease-out cursor-default select-none"
@@ -95,7 +95,7 @@ export default function Projects() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };

@@ -21,7 +21,7 @@ export default function HeroSection() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.215, 0.61, 0.355, 1.0],
+        ease: [0.215, 0.61, 0.355, 1.0] as [number, number, number, number],
       },
     },
   };
@@ -58,7 +58,7 @@ export default function HeroSection() {
               transition: {
                 delay: 0.6,
                 duration: 0.5,
-                ease: "easeOut",
+                ease: "easeOut" as const,
               },
             }}
           >
