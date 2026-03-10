@@ -59,23 +59,15 @@ function TechBadge({ tech, index }: TechBadgeProps) {
   return (
     <motion.span
       ref={techRef}
-      initial={{ opacity: 0, scale: 0.8, y: 10 }}
-      animate={techInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 10 }}
+      initial={{ opacity: 0, y: 8 }}
+      animate={techInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
       transition={{
-        delay: index * 0.12,
-        duration: 0.6,
+        delay: index * 0.08,
+        duration: 0.5,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
-      whileHover={{
-        scale: 1.08,
-        y: -2,
-        transition: {
-          duration: 0.2,
-          ease: [0.25, 0.46, 0.45, 0.94],
-        },
-      }}
-      whileTap={{ scale: 0.98 }}
-      className="rounded-full bg-gray-100 px-2 sm:px-3 py-1 text-xs sm:text-sm text-gray-600 border border-gray-200 hover:bg-gray-700 hover:text-white hover:border-gray-600 transition-colors duration-200 ease-out cursor-pointer"
+      whileHover={{ y: -1 }}
+      className="rounded-full bg-transparent px-2 sm:px-3 py-1 text-xs sm:text-sm text-[#F5F5F5]/40 border border-[#F5F5F5]/15 hover:text-[#F5F5F5]/80 hover:border-[#F5F5F5]/40 transition-colors duration-200 ease-out cursor-default select-none"
     >
       {tech}
     </motion.span>
