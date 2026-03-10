@@ -29,7 +29,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 15 },
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
   },
 };
 
@@ -37,7 +37,7 @@ const itemVariants = {
 const hoverAnimation = {
   scale: 1.02,
   boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
-  transition: { type: "spring", stiffness: 200, damping: 20 },
+  transition: { type: "spring" as const, stiffness: 200, damping: 20 },
 };
 
 const AboutMe = () => {
