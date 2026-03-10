@@ -105,7 +105,10 @@ export default function Stack() {
                   <motion.span
                     className="inline-block w-[3px] h-[0.7em] bg-[#343434] ml-[1px] align-middle"
                     animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+                    transition={{
+                      duration: 1,
+                      repeat: Number.POSITIVE_INFINITY,
+                    }}
                   />
                 )}
               </motion.span>
@@ -113,13 +116,15 @@ export default function Stack() {
           </h1>
           {/* Mobile-only text - shown below heading on mobile */}
           <p className="text-sm md:hidden max-w-xs">
-            I utilize responsive design techniques to ensure a consistent experience across all devices.
+            I utilize responsive design techniques to ensure a consistent
+            experience across all devices.
           </p>
         </motion.div>
         <motion.div variants={fadeIn} className="flex items-end justify-end">
           {/* Desktop-only text - shown on right side on desktop */}
           <p className="text-sm md:text-base max-w-xs hidden md:block">
-            I utilize responsive design techniques to ensure a consistent experience across all devices.
+            I design and develop responsive interfaces that work seamlessly
+            across all devices.
           </p>
         </motion.div>
       </motion.section>
@@ -142,16 +147,25 @@ export default function Stack() {
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
               ></motion.div>
-              <motion.div variants={fadeIn} className="w-2 h-2 rounded-full bg-[#343434] opacity-50"></motion.div>
+              <motion.div
+                variants={fadeIn}
+                className="w-2 h-2 rounded-full bg-[#343434] opacity-50"
+              ></motion.div>
             </div>
           </div>
           <div className="md:col-span-9 space-y-4">
-            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-bold">
+            <motion.h2
+              variants={fadeIn}
+              className="text-2xl md:text-3xl font-bold"
+            >
               TECH STACK
             </motion.h2>
-            <motion.p variants={fadeIn} className="text-sm md:text-base opacity-80 max-w-2xl">
-              I specialize in Next.js, Tailwind CSS, Framer Motion, Node.js, and MongoDB, building high-performance,
-              scalable, and visually engaging applications.
+            <motion.p
+              variants={fadeIn}
+              className="text-sm md:text-base opacity-80 max-w-2xl"
+            >
+              I specialize in JavaScript, TypeScript, React, Node.js, building
+              high-performance, scalable, and visually engaging applications.
             </motion.p>
           </div>
         </motion.div>
@@ -166,7 +180,10 @@ export default function Stack() {
         >
           <div className="md:col-span-3 hidden md:flex items-start justify-center md:justify-start">
             <div className="flex space-x-1">
-              <motion.div variants={fadeIn} className="w-2 h-2 rounded-full bg-[#343434] opacity-50"></motion.div>
+              <motion.div
+                variants={fadeIn}
+                className="w-2 h-2 rounded-full bg-[#343434] opacity-50"
+              ></motion.div>
               <motion.div
                 variants={fadeIn}
                 className="w-2 h-2 rounded-full bg-[#343434]"
@@ -176,28 +193,40 @@ export default function Stack() {
             </div>
           </div>
           <div className="md:col-span-9 pb-[6rem] md:pb-0">
-            <motion.h2 variants={fadeIn} className="text-2xl md:text-3xl font-bold">
+            <motion.h2
+              variants={fadeIn}
+              className="text-2xl md:text-3xl font-bold"
+            >
               EXPERIENCE
             </motion.h2>
-            <motion.h3 variants={fadeIn} className="text-xl md:text-xl mt-8 font-semibold">
-              Carelyo – Team Lead & Full-Stack Developer
-            </motion.h3>
-            <motion.p variants={fadeIn} className="text-sm md:text-base opacity-80 max-w-2xl mt-4">
-              Focused on Next.js, Tailwind, ShadCN, MongoDB, Node.js, and Express. Started as a full-stack developer and
-              was promoted to Team Lead, overseeing new full-stack interns. While still contributing to development, my
-              primary focus shifted to structuring workflows, leading meetings, and ensuring alignment between interns,
-              the Product Owner, and customers to meet business needs effectively. Additionally, worked on price
-              conversion from USD to Naira, optimized the payment flow with Paystack, and refactored the payment model
-              to ensure structured and reliable data handling.
-            </motion.p>
-            <motion.h3 variants={fadeIn} className="text-xl md:text-xl mt-8 font-semibold">
+            <motion.h3
+              variants={fadeIn}
+              className="text-xl md:text-xl mt-8 font-semibold"
+            >
               Vakansa – Full-Stack Developer
             </motion.h3>
-            <motion.p variants={fadeIn} className="text-sm md:text-base opacity-80 max-w-2xl mt-4">
-              Worked on optimization, significantly reducing costs by improving image handling with Cloudinary. Resolved
-              self-referencing canonical tags, improving SEO performance to 96. Ensured consistency and a high-quality
-              visual experience across the application. Focused on website performance, accessibility (WCAG AA
-              compliance), SEO, and overall user experience. Tech stack included React, CSS, Node.js, and MongoDB.
+            <motion.p
+              variants={fadeIn}
+              className="text-sm md:text-base opacity-80 max-w-2xl mt-4"
+            >
+              Maintaining and optimising a live web platform while mentoring
+              interns to align with product and business objectives. Managing
+              the workflow from planning through development to production,
+              ensuring clarity and smooth delivery across the team.
+            </motion.p>
+            <motion.h3
+              variants={fadeIn}
+              className="text-xl md:text-xl mt-8 font-semibold"
+            >
+              Carelyo – Team Lead & Full-Stack Developer
+            </motion.h3>
+            <motion.p
+              variants={fadeIn}
+              className="text-sm md:text-base opacity-80 max-w-2xl mt-4"
+            >
+              Led a team of up to 6 full-stack interns, overseeing code reviews,
+              sprint coordination, and technical mentorship while delivering
+              features end-to-end using Scrum.
             </motion.p>
           </div>
         </motion.div>
