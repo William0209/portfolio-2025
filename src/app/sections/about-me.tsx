@@ -3,13 +3,12 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
-import Äng from "../../../public/assets/äng.jpg";
-import Pic from "../../../public/assets/bild.jpg";
-import Brygga from "../../../public/assets/brygga.jpg";
-import Flowers from "../../../public/assets/flowers.jpg";
-import Flowers2 from "../../../public/assets/flowers2.jpg";
-import Forest from "../../../public/assets/forest.jpg";
-import Landscape from "../../../public/assets/landscape.jpg";
+import Aesth1 from "../../../public/assets/aesth1.jpg";
+import Aesth2 from "../../../public/assets/aesth2.jpg";
+import Aesth4 from "../../../public/assets/aesth4.jpg";
+import Aesth5 from "../../../public/assets/aesth5.jpg";
+import Aesth6 from "../../../public/assets/aesth6.jpg";
+import Aesth7 from "../../../public/assets/aesth7.jpg";
 
 // Container animation variant
 const containerVariants = {
@@ -64,8 +63,8 @@ const AboutMe = () => {
           whileHover={hoverAnimation}
         >
           <Image
-            src={Pic}
-            alt="Pic"
+            src={Aesth1}
+            alt="Aesthetic 1"
             fill
             priority
             sizes="90vw"
@@ -78,11 +77,7 @@ const AboutMe = () => {
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
-          <Image src={Brygga} alt="Brygga" fill sizes="90vw" className="absolute inset-0 object-cover z-0" />
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <h2 className="text-white text-lg font-bold px-2 text-center">This Is Me</h2>
-          </div>
+          <Image src={Aesth5} alt="Aesthetic 5" fill sizes="90vw" className="absolute inset-0 object-cover z-0" />
         </motion.div>
         <div className="grid grid-cols-2 gap-3">
           <motion.div
@@ -90,14 +85,14 @@ const AboutMe = () => {
             variants={itemVariants}
             whileHover={hoverAnimation}
           >
-            <Image src={Äng} alt="Äng" fill sizes="45vw" className="absolute inset-0 object-cover z-0" />
+            <Image src={Aesth2} alt="Aesthetic 2" fill sizes="45vw" className="absolute inset-0 object-cover z-0" />
           </motion.div>
           <motion.div
             className="relative h-24 rounded-lg overflow-hidden"
             variants={itemVariants}
             whileHover={hoverAnimation}
           >
-            <Image src={Landscape} alt="Landscape" fill sizes="45vw" className="absolute inset-0 object-cover z-0" />
+            <Image src={Aesth4} alt="Aesthetic 4" fill sizes="45vw" className="absolute inset-0 object-cover z-0" />
           </motion.div>
         </div>
         <div className="grid grid-cols-3 gap-3">
@@ -106,21 +101,29 @@ const AboutMe = () => {
             variants={itemVariants}
             whileHover={hoverAnimation}
           >
-            <Image src={Forest} alt="Forest" fill sizes="30vw" className="absolute inset-0 object-cover z-0" />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="/assets/aesth3.mov" type="video/mp4" />
+            </video>
           </motion.div>
           <motion.div
             className="relative h-20 rounded-lg overflow-hidden"
             variants={itemVariants}
             whileHover={hoverAnimation}
           >
-            <Image src={Flowers} alt="Flowers" fill sizes="30vw" className="absolute inset-0 object-cover z-0" />
+            <Image src={Aesth6} alt="Aesthetic 6" fill sizes="30vw" className="absolute inset-0 object-cover z-0" />
           </motion.div>
           <motion.div
             className="relative h-20 rounded-lg overflow-hidden"
             variants={itemVariants}
             whileHover={hoverAnimation}
           >
-            <Image src={Flowers2} alt="Flowers2" fill sizes="30vw" className="absolute inset-0 object-cover z-0" />
+            <Image src={Aesth7} alt="Aesthetic 7" fill sizes="30vw" className="absolute inset-0 object-cover z-0" />
           </motion.div>
         </div>
       </motion.div>
@@ -133,14 +136,15 @@ const AboutMe = () => {
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
       >
+        {/* aesth1 — large main */}
         <motion.div
           className="relative min-h-[50px] col-span-3 row-span-5 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Pic}
-            alt="Pic"
+            src={Aesth1}
+            alt="Aesthetic 1"
             fill
             priority
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 30vw"
@@ -148,83 +152,87 @@ const AboutMe = () => {
             style={{ filter: "brightness(0.9)" }}
           />
         </motion.div>
+        {/* aesth2 */}
         <motion.div
           className="relative min-h-[50px] col-span-2 row-span-2 col-start-4 row-start-1 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Äng}
-            alt="Äng"
+            src={Aesth2}
+            alt="Aesthetic 2"
             fill
             sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
             className="absolute inset-0 object-cover z-0"
           />
         </motion.div>
+        {/* aesth3 — video */}
         <motion.div
           className="relative min-h-[50px] col-span-2 row-span-3 col-start-6 row-start-1 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
-          <Image
-            src={Landscape}
-            alt="Landscape"
-            fill
-            sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
-            className="absolute inset-0 object-cover z-0"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          >
+            <source src="/assets/aesth3.mov" type="video/mp4" />
+          </video>
         </motion.div>
+        {/* aesth4 */}
         <motion.div
           className="relative min-h-[50px] col-span-2 row-span-2 col-start-6 row-start-4 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Forest}
-            alt="Forest"
+            src={Aesth4}
+            alt="Aesthetic 4"
             fill
             sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
             className="absolute inset-0 object-cover z-0"
           />
         </motion.div>
+        {/* aesth5 — "This Is Me" overlay */}
         <motion.div
           className="relative min-h-[50px] col-span-2 row-span-3 col-start-4 row-start-3 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Brygga}
-            alt="Brygga"
+            src={Aesth5}
+            alt="Aesthetic 5"
             fill
             sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 25vw"
             className="absolute inset-0 object-cover z-0"
           />
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold px-2 text-center">This Is Me</h2>
-          </div>
         </motion.div>
+        {/* aesth6 — wide bottom */}
         <motion.div
           className="relative min-h-[50px] col-span-4 row-span-2 col-start-4 row-start-6 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Flowers}
-            alt="Flowers"
+            src={Aesth6}
+            alt="Aesthetic 6"
             fill
             sizes="(max-width: 640px) 60vw, (max-width: 1024px) 50vw, 40vw"
             className="absolute inset-0 object-cover z-0"
           />
         </motion.div>
+        {/* aesth7 — bottom left */}
         <motion.div
           className="relative min-h-[50px] col-span-3 row-span-2 row-start-6 rounded-lg sm:rounded-xl overflow-hidden"
           variants={itemVariants}
           whileHover={hoverAnimation}
         >
           <Image
-            src={Flowers2}
-            alt="Flowers2"
+            src={Aesth7}
+            alt="Aesthetic 7"
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 30vw"
             className="absolute inset-0 object-cover z-0"
